@@ -1,0 +1,434 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>VapeFree - Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600&amp;family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#00201d",
+                      "on-secondary-fixed": "#390c00",
+                      "surface-container": "#efeeeb",
+                      "secondary-fixed": "#ffdbcf",
+                      "inverse-primary": "#82d5cb",
+                      "on-tertiary-container": "#113f23",
+                      "surface-tint": "#006a63",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-highest": "#e4e2df",
+                      "on-primary-container": "#003f3a",
+                      "surface-dim": "#dbdad7",
+                      "surface-container-high": "#eae8e5",
+                      "secondary-container": "#fdaa8d",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed": "#bcefc5",
+                      "outline-variant": "#bec9c6",
+                      "primary-container": "#5baea5",
+                      "on-surface": "#1b1c1a",
+                      "surface-bright": "#fbf9f6",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "secondary": "#8d4d36",
+                      "primary-fixed": "#9ef2e7",
+                      "on-tertiary-fixed-variant": "#234f31",
+                      "tertiary-container": "#7cab86",
+                      "on-background": "#1b1c1a",
+                      "on-secondary-fixed-variant": "#703621",
+                      "background": "#fbf9f6",
+                      "on-surface-variant": "#3e4947",
+                      "outline": "#6e7977",
+                      "on-primary-fixed-variant": "#00504a",
+                      "surface-variant": "#e4e2df",
+                      "primary": "#006a63",
+                      "surface": "#fbf9f6",
+                      "tertiary": "#3b6847",
+                      "inverse-surface": "#30312f",
+                      "secondary-fixed-dim": "#ffb59c",
+                      "inverse-on-surface": "#f2f0ed",
+                      "tertiary-fixed-dim": "#a1d2aa",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f5f3f0",
+                      "primary-fixed-dim": "#82d5cb",
+                      "on-tertiary-fixed": "#00210d",
+                      "on-secondary-container": "#783c27"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-md": "24px",
+                      "base": "8px",
+                      "container-padding": "24px",
+                      "stack-lg": "48px",
+                      "stack-sm": "12px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Quicksand"
+                      ],
+                      "label-sm": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Quicksand"
+                      ],
+                      "headline-lg": [
+                              "Quicksand"
+                      ],
+                      "headline-md": [
+                              "Quicksand"
+                      ],
+                      "headline-xl": [
+                              "Quicksand"
+                      ],
+                      "headline-lg-mobile": [
+                              "Quicksand"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-xl": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+            .icon-filled {
+                font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+            
+            /* Ambient shadow for depth without harsh borders */
+            .ambient-shadow {
+                box-shadow: 0 4px 30px rgba(91, 174, 165, 0.08);
+            }
+            
+            /* Soft gradient background for interactive elements */
+            .soft-gradient {
+                background: linear-gradient(135deg, rgba(91, 174, 165, 0.1), rgba(124, 171, 134, 0.05));
+            }
+            
+            .button-press {
+                @apply active:scale-95 transition-transform duration-200 ease-in-out;
+            }
+            
+            /* Hide scrollbar for clean horizontal scrolls if needed */
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Main Content Container -->
+<main class="flex-grow w-full max-w-[600px] mx-auto px-container-padding py-stack-lg flex flex-col relative">
+<!-- Progress Indicators (Dots) -->
+<div class="flex justify-center gap-2 mb-stack-lg" id="progress-dots">
+<div class="w-2 h-2 rounded-full bg-primary transition-all duration-300"></div>
+<div class="w-2 h-2 rounded-full bg-surface-variant transition-all duration-300"></div>
+<div class="w-2 h-2 rounded-full bg-surface-variant transition-all duration-300"></div>
+</div>
+<!-- Step 1: Welcome -->
+<div class="flex flex-col flex-grow items-center text-center transition-all duration-500 opacity-100 translate-y-0" id="step-1">
+<div class="flex-grow flex flex-col items-center justify-center space-y-stack-md w-full">
+<!-- Logo Graphic -->
+<div class="w-32 h-32 rounded-full bg-surface-container-lowest ambient-shadow flex items-center justify-center text-primary mb-4 relative">
+<div class="absolute inset-0 rounded-full soft-gradient"></div>
+<span class="material-symbols-outlined text-[64px] icon-filled relative z-10 text-primary-container">bubble_chart</span>
+</div>
+<div class="space-y-stack-sm">
+<h1 class="font-headline-xl text-headline-xl text-on-surface">Welcome to VapeFree</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-sm mx-auto">
+                        Your calm companion on the journey to breathing easier. No pressure, just progress.
+                    </p>
+</div>
+<!-- Illustration Placeholder -->
+<div class="w-full max-w-xs mt-stack-md rounded-2xl overflow-hidden ambient-shadow bg-surface-container-lowest">
+<img class="w-full h-auto object-cover aspect-[4/3] mix-blend-multiply opacity-90" data-alt="A soft, supportive illustration of a person taking a deep breath in nature. The style is minimalist and organic, using a calm palette of light teal and peach tones against a pristine white background. The mood is hopeful and serene, emphasizing wellness and freedom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-lacjsEm29KhQCNBisy4FYLx6cWat0H8Bn1MaD2ILYLvD1TzhVuvdO8zFrvasBSd1L6mpwVdb8DvJiSGPEjYox2wpdoh9dOiTvhCtnQW8JsRjhfeZ4noPFpk5Wv1_cC8z9zBi5s2G7SPGJqcN7tXZlnZauyhMhyGQ0GaRR5jAxhdcqD8m7WKBo3xxLZy6HflE7CX_rI23ZVrmBLDAkCs_KN8p4Y-AVwwJ5w6DkMGLWVsdXJJdTEuWTA">
+</div>
+</div>
+<div class="w-full mt-stack-lg pt-stack-md">
+<button class="w-full py-4 px-6 rounded-full bg-primary text-on-primary font-headline-md text-headline-md shadow-[0_4px_15px_rgba(0,106,99,0.2)] button-press flex items-center justify-center gap-2" onclick="nextStep(2)">
+                    Let's Begin
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Step 2: Habits -->
+<div class="hidden flex-col flex-grow items-center transition-all duration-500 opacity-0 translate-y-4" id="step-2">
+<div class="w-full space-y-stack-md mt-stack-sm">
+<button class="w-12 h-12 rounded-full bg-surface-container-lowest ambient-shadow flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors button-press mb-4" onclick="prevStep(1)">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Understanding your habits</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Let's establish your baseline. Roughly how many puffs do you take on an average day?
+                </p>
+<!-- Custom Input Area -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-8 ambient-shadow mt-stack-md text-center space-y-6">
+<div class="flex items-center justify-center gap-6">
+<button class="w-16 h-16 rounded-full bg-surface-container hover:bg-surface-variant text-primary flex items-center justify-center text-3xl button-press transition-colors" onclick="adjustPuffs(-10)">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<div class="flex flex-col items-center">
+<span class="font-headline-xl text-5xl text-on-surface tracking-tight" id="puff-count">150</span>
+<span class="font-label-md text-label-md text-on-surface-variant mt-2 uppercase tracking-widest">Puffs / Day</span>
+</div>
+<button class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary flex items-center justify-center text-3xl button-press transition-colors shadow-[0_4px_15px_rgba(91,174,165,0.3)]" onclick="adjustPuffs(10)">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden mt-6">
+<div class="h-full bg-primary rounded-full transition-all duration-300" id="puff-bar" style="width: 50%"></div>
+</div>
+</div>
+<div class="bg-secondary-fixed-dim/20 rounded-[1.5rem] p-4 flex items-start gap-4 mt-stack-md">
+<span class="material-symbols-outlined text-secondary mt-1">lightbulb</span>
+<p class="font-body-md text-body-md text-on-secondary-container text-sm">
+                         It's okay to guess. Being honest with your baseline helps set a comfortable pace.
+                     </p>
+</div>
+</div>
+<div class="w-full mt-auto pt-stack-lg">
+<button class="w-full py-4 px-6 rounded-full bg-primary text-on-primary font-headline-md text-headline-md shadow-[0_4px_15px_rgba(0,106,99,0.2)] button-press flex items-center justify-center gap-2" onclick="nextStep(3)">
+                    Continue
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Step 3: Goals -->
+<div class="hidden flex-col flex-grow items-center transition-all duration-500 opacity-0 translate-y-4" id="step-3">
+<div class="w-full space-y-stack-md mt-stack-sm">
+<button class="w-12 h-12 rounded-full bg-surface-container-lowest ambient-shadow flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors button-press mb-4" onclick="prevStep(2)">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Set your pace</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Choose a gradual reduction goal. You can always change this later.
+                </p>
+<!-- Goal Selection Cards (Bento Style) -->
+<div class="grid grid-cols-1 gap-4 mt-stack-md">
+<!-- Goal Option 1 -->
+<div class="goal-card cursor-pointer border-2 border-transparent bg-surface-container-lowest rounded-[2rem] p-6 ambient-shadow transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] relative overflow-hidden group selected-goal" onclick="selectGoal('gentle', this)">
+<div class="absolute top-0 right-0 p-6 opacity-10 group-[.selected-goal]:opacity-100 group-[.selected-goal]:text-primary transition-opacity">
+<span class="material-symbols-outlined icon-filled text-3xl">check_circle</span>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed-dim/30 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Gentle</h3>
+<p class="font-label-md text-label-md text-primary mt-1">10% reduction / week</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 text-sm">
+                                    A slow, comfortable pace perfect for building initial momentum without stress.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Goal Option 2 -->
+<div class="goal-card cursor-pointer border-2 border-transparent bg-surface-container-lowest rounded-[2rem] p-6 ambient-shadow transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] relative overflow-hidden group" onclick="selectGoal('steady', this)">
+<div class="absolute top-0 right-0 p-6 opacity-0 group-[.selected-goal]:opacity-100 group-[.selected-goal]:text-primary transition-opacity">
+<span class="material-symbols-outlined icon-filled text-3xl">check_circle</span>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container/30 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">trending_down</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Steady</h3>
+<p class="font-label-md text-label-md text-primary mt-1">20% reduction / week</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 text-sm">
+                                    A balanced approach for steady progress. Noticeable changes week over week.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full mt-auto pt-stack-lg pb-stack-md">
+<button class="w-full py-4 px-6 rounded-full bg-primary text-on-primary font-headline-md text-headline-md shadow-[0_4px_15px_rgba(0,106,99,0.3)] button-press flex items-center justify-center gap-2" onclick="finishOnboarding()">
+                    Get Started
+                    <span class="material-symbols-outlined">rocket_launch</span>
+</button>
+</div>
+</div>
+</main>
+<script>
+        let currentStep = 1;
+        let puffs = 150;
+
+        function updateDots(step) {
+            const dots = document.getElementById('progress-dots').children;
+            for (let i = 0; i < dots.length; i++) {
+                if (i < step) {
+                    dots[i].classList.remove('bg-surface-variant');
+                    dots[i].classList.add('bg-primary');
+                } else {
+                    dots[i].classList.remove('bg-primary');
+                    dots[i].classList.add('bg-surface-variant');
+                }
+            }
+        }
+
+        function showStep(step) {
+            const currentEl = document.getElementById(`step-${currentStep}`);
+            const nextEl = document.getElementById(`step-${step}`);
+            
+            // Fade out current
+            currentEl.classList.remove('opacity-100', 'translate-y-0');
+            currentEl.classList.add('opacity-0', '-translate-y-4');
+            
+            setTimeout(() => {
+                currentEl.classList.add('hidden');
+                currentEl.classList.remove('flex');
+                
+                nextEl.classList.remove('hidden');
+                nextEl.classList.add('flex');
+                
+                // Force reflow
+                void nextEl.offsetWidth;
+                
+                // Fade in next
+                nextEl.classList.remove('opacity-0', 'translate-y-4', '-translate-y-4');
+                nextEl.classList.add('opacity-100', 'translate-y-0');
+                
+                currentStep = step;
+                updateDots(step);
+            }, 300); // Matches transition duration
+        }
+
+        function nextStep(step) {
+            showStep(step);
+        }
+
+        function prevStep(step) {
+            const currentEl = document.getElementById(`step-${currentStep}`);
+            currentEl.classList.remove('translate-y-0', '-translate-y-4');
+            currentEl.classList.add('translate-y-4'); // move down when going back
+            showStep(step);
+        }
+
+        function adjustPuffs(amount) {
+            puffs = Math.max(10, Math.min(500, puffs + amount));
+            document.getElementById('puff-count').textContent = puffs;
+            
+            // visual representation of bar (assuming 300 is 'max' for visual scale)
+            const percentage = Math.min(100, (puffs / 300) * 100);
+            document.getElementById('puff-bar').style.width = `${percentage}%`;
+        }
+
+        function selectGoal(type, element) {
+            // Remove selection from all
+            document.querySelectorAll('.goal-card').forEach(card => {
+                card.classList.remove('selected-goal', 'border-primary', 'bg-primary-container/5');
+                card.classList.add('border-transparent');
+            });
+            
+            // Add selection to clicked
+            element.classList.add('selected-goal', 'border-primary', 'bg-primary-container/5');
+            element.classList.remove('border-transparent');
+        }
+
+        function finishOnboarding() {
+            // Simulate completion
+            const btn = event.currentTarget;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">refresh</span> Finishing setup...';
+            btn.classList.add('opacity-80', 'pointer-events-none');
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined icon-filled">check_circle</span> All set!';
+                btn.classList.replace('bg-primary', 'bg-tertiary');
+                btn.classList.replace('text-on-primary', 'text-on-tertiary');
+            }, 1000);
+        }
+        
+        // Initialize first card as selected on load
+        document.addEventListener('DOMContentLoaded', () => {
+             const firstCard = document.querySelector('.goal-card');
+             if(firstCard) {
+                 firstCard.classList.add('selected-goal', 'border-primary', 'bg-primary-container/5');
+                 firstCard.classList.remove('border-transparent');
+             }
+        });
+    </script>
+</body></html>

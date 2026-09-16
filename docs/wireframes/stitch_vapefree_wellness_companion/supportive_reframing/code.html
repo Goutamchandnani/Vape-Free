@@ -1,0 +1,160 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>VapeFree - Supportive Restart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#00201d",
+                        "on-secondary-fixed": "#390c00",
+                        "surface-container": "#efeeeb",
+                        "secondary-fixed": "#ffdbcf",
+                        "inverse-primary": "#82d5cb",
+                        "on-tertiary-container": "#113f23",
+                        "surface-tint": "#006a63",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e4e2df",
+                        "on-primary-container": "#003f3a",
+                        "surface-dim": "#dbdad7",
+                        "surface-container-high": "#eae8e5",
+                        "secondary-container": "#fdaa8d",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#bcefc5",
+                        "outline-variant": "#bec9c6",
+                        "primary-container": "#5baea5",
+                        "on-surface": "#1b1c1a",
+                        "surface-bright": "#fbf9f6",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary": "#8d4d36",
+                        "primary-fixed": "#9ef2e7",
+                        "on-tertiary-fixed-variant": "#234f31",
+                        "tertiary-container": "#7cab86",
+                        "on-background": "#1b1c1a",
+                        "on-secondary-fixed-variant": "#703621",
+                        "background": "#fbf9f6",
+                        "on-surface-variant": "#3e4947",
+                        "outline": "#6e7977",
+                        "on-primary-fixed-variant": "#00504a",
+                        "surface-variant": "#e4e2df",
+                        "primary": "#006a63",
+                        "surface": "#fbf9f6",
+                        "tertiary": "#3b6847",
+                        "inverse-surface": "#30312f",
+                        "secondary-fixed-dim": "#ffb59c",
+                        "inverse-on-surface": "#f2f0ed",
+                        "tertiary-fixed-dim": "#a1d2aa",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f5f3f0",
+                        "primary-fixed-dim": "#82d5cb",
+                        "on-tertiary-fixed": "#00210d",
+                        "on-secondary-container": "#783c27"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "base": "8px",
+                        "container-padding": "24px",
+                        "stack-lg": "48px",
+                        "stack-sm": "12px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Quicksand"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Quicksand"],
+                        "headline-lg": ["Quicksand"],
+                        "headline-md": ["Quicksand"],
+                        "headline-xl": ["Quicksand"],
+                        "headline-lg-mobile": ["Quicksand"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative overflow-hidden">
+<!-- Top Navigation (Shell logic: Supressed for transactional/linear intent) -->
+<!-- Ambient Background Effect -->
+<div class="absolute inset-0 pointer-events-none opacity-40 z-0">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-secondary-fixed-dim rounded-full blur-[120px] opacity-30 mix-blend-multiply"></div>
+<div class="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-tertiary-fixed-dim rounded-full blur-[100px] opacity-20 mix-blend-multiply"></div>
+</div>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center p-container-padding z-10 w-full max-w-[600px] mx-auto min-h-screen">
+<!-- Header Section -->
+<header class="text-center mb-stack-lg w-full">
+<!-- Gentle Icon -->
+<div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-secondary-container/20 text-secondary mb-stack-md shadow-[0_8px_32px_rgba(253,170,141,0.15)]">
+<span class="material-symbols-outlined text-[48px] icon-filled">air</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-stack-sm md:hidden font-headline-lg-mobile text-headline-lg-mobile">
+                Every breath is a new beginning.
+            </h1>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-stack-sm hidden md:block">
+                Every breath is a new beginning.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto">
+                One slip-up doesn't erase your progress. Your <strong class="text-secondary font-600">5 clean days</strong> are still yours.
+            </p>
+</header>
+<!-- Action Cards (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter w-full max-w-lg mb-stack-lg">
+<!-- Log and Breathe Card -->
+<button class="flex flex-col items-start p-container-padding bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(253,170,141,0.06)] hover:bg-surface-container-lowest/80 hover:scale-[0.98] transition-all duration-300 text-left group">
+<div class="w-12 h-12 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary mb-stack-sm group-hover:bg-secondary-container/50 transition-colors">
+<span class="material-symbols-outlined">edit_note</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-base">Log &amp; Breathe</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Note what happened to understand your triggers, then take a deep breath.</p>
+</button>
+<!-- Support Tip Card -->
+<button class="flex flex-col items-start p-container-padding bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(91,174,165,0.06)] hover:bg-surface-container-lowest/80 hover:scale-[0.98] transition-all duration-300 text-left group">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary mb-stack-sm group-hover:bg-primary-container/40 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-base">Get a Tip</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Read a gentle, supportive tip to help you refocus your energy.</p>
+</button>
+</div>
+<!-- Subtle Dismiss -->
+<button class="font-label-md text-label-md text-outline hover:text-on-surface transition-colors py-2 px-4 rounded-full">
+            I just need a moment
+        </button>
+</main>
+<!-- Bottom Navigation (Shell logic: Supressed for transactional/linear intent) -->
+</body></html>

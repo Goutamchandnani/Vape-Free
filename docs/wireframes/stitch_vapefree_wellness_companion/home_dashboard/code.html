@@ -1,0 +1,195 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>VapeFree - Home Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600&amp;family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#00201d",
+                        "on-secondary-fixed": "#390c00",
+                        "surface-container": "#efeeeb",
+                        "secondary-fixed": "#ffdbcf",
+                        "inverse-primary": "#82d5cb",
+                        "on-tertiary-container": "#113f23",
+                        "surface-tint": "#006a63",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e4e2df",
+                        "on-primary-container": "#003f3a",
+                        "surface-dim": "#dbdad7",
+                        "surface-container-high": "#eae8e5",
+                        "secondary-container": "#fdaa8d",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#bcefc5",
+                        "outline-variant": "#bec9c6",
+                        "primary-container": "#5baea5",
+                        "on-surface": "#1b1c1a",
+                        "surface-bright": "#fbf9f6",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary": "#8d4d36",
+                        "primary-fixed": "#9ef2e7",
+                        "on-tertiary-fixed-variant": "#234f31",
+                        "tertiary-container": "#7cab86",
+                        "on-background": "#1b1c1a",
+                        "on-secondary-fixed-variant": "#703621",
+                        "background": "#fbf9f6",
+                        "on-surface-variant": "#3e4947",
+                        "outline": "#6e7977",
+                        "on-primary-fixed-variant": "#00504a",
+                        "surface-variant": "#e4e2df",
+                        "primary": "#006a63",
+                        "surface": "#fbf9f6",
+                        "tertiary": "#3b6847",
+                        "inverse-surface": "#30312f",
+                        "secondary-fixed-dim": "#ffb59c",
+                        "inverse-on-surface": "#f2f0ed",
+                        "tertiary-fixed-dim": "#a1d2aa",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f5f3f0",
+                        "primary-fixed-dim": "#82d5cb",
+                        "on-tertiary-fixed": "#00210d",
+                        "on-secondary-container": "#783c27"
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        lg: "2rem",
+                        xl: "3rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "stack-md": "24px",
+                        "base": "8px",
+                        "container-padding": "24px",
+                        "stack-lg": "48px",
+                        "stack-sm": "12px",
+                        "gutter": "16px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Quicksand"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Quicksand"],
+                        "headline-lg": ["Quicksand"],
+                        "headline-md": ["Quicksand"],
+                        "headline-xl": ["Quicksand"],
+                        "headline-lg-mobile": ["Quicksand"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+                        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "500" }],
+                        "headline-lg": ["28px", { lineHeight: "36px", fontWeight: "600" }],
+                        "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }],
+                        "headline-xl": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col items-center">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface dark:bg-surface-dim shadow-[0_4px_20px_rgba(91,174,165,0.08)] z-40">
+<div class="flex items-center justify-between px-container-padding h-16 w-full max-w-[600px] mx-auto">
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="bubble_chart">bubble_chart</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">VapeFree</h1>
+<div class="w-6 h-6"></div> <!-- Spacer for center alignment -->
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-[600px] px-container-padding pt-stack-md pb-stack-lg flex-1 flex flex-col gap-stack-lg mb-20">
+<!-- Welcome & Motivation -->
+<section class="text-center space-y-stack-sm">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">You're doing great!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Every breath gets a little easier.</p>
+</section>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-2 gap-gutter">
+<!-- Days Clean -->
+<div class="bg-surface-container-lowest rounded-lg p-stack-md flex flex-col items-center justify-center shadow-[0_4px_20px_rgba(91,174,165,0.08)]">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-base filled" data-icon="wb_sunny">wb_sunny</span>
+<span class="font-headline-xl text-headline-xl text-primary">5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">Days Clean</span>
+</div>
+<!-- Money Saved -->
+<div class="bg-surface-container-lowest rounded-lg p-stack-md flex flex-col items-center justify-center shadow-[0_4px_20px_rgba(91,174,165,0.08)]">
+<span class="material-symbols-outlined text-tertiary-container text-4xl mb-base filled" data-icon="savings">savings</span>
+<span class="font-headline-xl text-headline-xl text-tertiary">£42.50</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">Money Saved</span>
+</div>
+</section>
+<!-- Today's Puffs (Progress Ring) -->
+<section class="bg-surface-container-lowest rounded-xl p-stack-md shadow-[0_4px_20px_rgba(91,174,165,0.08)] flex flex-col items-center relative overflow-hidden">
+<!-- Soft ambient gradient behind the ring -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary-fixed/20 to-surface-container-lowest opacity-50 rounded-xl pointer-events-none"></div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-md relative z-10">Today's Puffs</h3>
+<!-- Circular Progress (SVG representation) -->
+<div class="relative w-48 h-48 flex items-center justify-center mb-stack-md z-10">
+<!-- Background Ring -->
+<svg class="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+<circle class="text-surface-variant" cx="50" cy="50" fill="none" r="45" stroke="currentColor" stroke-width="8"></circle>
+<!-- Progress Ring (12/20 = 60% = 283 * 0.6 = ~170 dashoffset) -->
+<circle class="text-primary transition-all duration-1000 ease-out" cx="50" cy="50" fill="none" r="45" stroke="currentColor" stroke-dasharray="283" stroke-dashoffset="113" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<!-- Inner Text -->
+<div class="flex flex-col items-center">
+<span class="font-headline-xl text-headline-xl text-primary">12<span class="font-headline-md text-headline-md text-on-surface-variant">/20</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Limit</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-center relative z-10">You're on track to meet your daily goal.</p>
+</section>
+<!-- Primary Action -->
+<section class="flex justify-center mt-stack-sm">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline-md text-headline-md px-12 py-4 rounded-full shadow-[0_8px_24px_rgba(91,174,165,0.2)] hover:opacity-90 active:scale-95 transition-all duration-200 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                Log a Puff
+            </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-lg bg-surface-container-lowest dark:bg-surface-container-lowest shadow-[0_-4px_20px_rgba(91,174,165,0.08)] z-50 md:hidden">
+<div class="fixed bottom-0 left-0 right-0 z-50 flex justify-around items-center px-4 py-3 max-w-[600px] mx-auto bg-surface-container-lowest">
+<!-- Home (Active) -->
+<button class="flex flex-col items-center justify-center bg-primary-container dark:bg-on-primary-fixed-variant text-on-primary-container dark:text-primary-fixed rounded-xl px-4 py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined filled" data-icon="home">home</span>
+<span class="font-label-md text-label-md mt-1">Home</span>
+</button>
+<!-- Log (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-label-md text-label-md mt-1">Log</span>
+</button>
+<!-- Progress (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-label-md text-label-md mt-1">Progress</span>
+</button>
+</div>
+</nav>
+<!-- Desktop Sidebar/Nav Alternative (Hidden on Mobile) - Fulfilling the responsive pivot mandate vaguely by implying this canvas centers on a wider screen, though the JSON only specified BottomNavBar. Leaving structural flex max-w to handle wide screens elegantly. -->
+
+
+</body></html>

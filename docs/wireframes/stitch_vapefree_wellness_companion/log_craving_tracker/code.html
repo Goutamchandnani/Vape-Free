@@ -1,0 +1,246 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Log Puff - VapeFree</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#00201d",
+                        "on-secondary-fixed": "#390c00",
+                        "surface-container": "#efeeeb",
+                        "secondary-fixed": "#ffdbcf",
+                        "inverse-primary": "#82d5cb",
+                        "on-tertiary-container": "#113f23",
+                        "surface-tint": "#006a63",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e4e2df",
+                        "on-primary-container": "#003f3a",
+                        "surface-dim": "#dbdad7",
+                        "surface-container-high": "#eae8e5",
+                        "secondary-container": "#fdaa8d",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#bcefc5",
+                        "outline-variant": "#bec9c6",
+                        "primary-container": "#5baea5",
+                        "on-surface": "#1b1c1a",
+                        "surface-bright": "#fbf9f6",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary": "#8d4d36",
+                        "primary-fixed": "#9ef2e7",
+                        "on-tertiary-fixed-variant": "#234f31",
+                        "tertiary-container": "#7cab86",
+                        "on-background": "#1b1c1a",
+                        "on-secondary-fixed-variant": "#703621",
+                        "background": "#fbf9f6",
+                        "on-surface-variant": "#3e4947",
+                        "outline": "#6e7977",
+                        "on-primary-fixed-variant": "#00504a",
+                        "surface-variant": "#e4e2df",
+                        "primary": "#006a63",
+                        "surface": "#fbf9f6",
+                        "tertiary": "#3b6847",
+                        "inverse-surface": "#30312f",
+                        "secondary-fixed-dim": "#ffb59c",
+                        "inverse-on-surface": "#f2f0ed",
+                        "tertiary-fixed-dim": "#a1d2aa",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f5f3f0",
+                        "primary-fixed-dim": "#82d5cb",
+                        "on-tertiary-fixed": "#00210d",
+                        "on-secondary-container": "#783c27"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "base": "8px",
+                        "container-padding": "24px",
+                        "stack-lg": "48px",
+                        "stack-sm": "12px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Quicksand"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Quicksand"],
+                        "headline-lg": ["Quicksand"],
+                        "headline-md": ["Quicksand"],
+                        "headline-xl": ["Quicksand"],
+                        "headline-lg-mobile": ["Quicksand"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #fbf9f6;
+            color: #1b1c1a;
+            -webkit-font-smoothing: antialiased;
+        }
+        .chip-selected {
+            background-color: #fdaa8d !important; /* secondary-container */
+            color: #783c27 !important; /* on-secondary-container */
+            border-color: #fdaa8d !important;
+        }
+        .soft-shadow {
+            box-shadow: 0 8px 32px rgba(91,174,165,0.08);
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-[80px]">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface shadow-[0_4px_20px_rgba(91,174,165,0.08)] z-40 hidden md:flex items-center justify-between px-container-padding h-16 max-w-[600px] mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary font-headline-md text-headline-md">bubble_chart</span>
+<span class="font-headline-md text-headline-md text-primary tracking-tight">VapeFree</span>
+</div>
+<nav class="flex gap-4">
+<a class="text-on-surface-variant font-label-md text-label-md hover:opacity-80 transition-opacity" href="#">Home</a>
+<a class="text-primary font-label-md text-label-md active:scale-95 transition-transform duration-200" href="#">Log</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:opacity-80 transition-opacity" href="#">Progress</a>
+</nav>
+</header>
+<!-- Mobile Header (Simplified for focus, as requested for a simple interface, but maintaining brand anchor) -->
+<header class="w-full top-0 sticky bg-surface md:hidden flex items-center justify-between px-container-padding h-16 z-40">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary font-headline-md text-headline-md">bubble_chart</span>
+<span class="font-headline-md text-headline-md text-primary tracking-tight">VapeFree</span>
+</div>
+</header>
+<main class="max-w-[600px] mx-auto px-container-padding pt-stack-md flex flex-col gap-stack-lg relative">
+<!-- Log Puff Section -->
+<section class="flex flex-col items-center justify-center pt-stack-md">
+<h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-on-surface text-center mb-stack-sm">Log a Puff</h1>
+<p class="font-body-md text-body-md text-on-surface-variant text-center mb-stack-md max-w-sm">
+                It's okay to feel this way. Identifying triggers is progress.
+            </p>
+<button class="group relative flex items-center justify-center w-48 h-48 rounded-full bg-gradient-to-br from-primary-container to-tertiary-container soft-shadow active:scale-95 transition-transform duration-300 overflow-hidden cursor-pointer focus:outline-none focus:ring-4 focus:ring-primary-fixed" id="logBtn">
+<div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full"></div>
+<div class="flex flex-col items-center gap-2 z-10 text-on-primary-container">
+<span class="material-symbols-outlined text-[48px]" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+<span class="font-headline-md text-headline-md">1 Puff</span>
+</div>
+<!-- Subtle ripple effect container -->
+<div class="absolute inset-0 rounded-full overflow-hidden pointer-events-none" id="rippleContainer"></div>
+</button>
+</section>
+<!-- Triggers Section -->
+<section class="bg-surface-container-lowest rounded-xl p-6 soft-shadow relative overflow-hidden">
+<!-- Ambient gradient blob -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary-fixed opacity-20 rounded-full blur-2xl pointer-events-none"></div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">How are you feeling?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">Select what might be triggering this craving.</p>
+<div class="flex flex-wrap gap-3" id="triggerTags">
+<button class="trigger-chip px-5 py-3 rounded-full border border-outline-variant bg-surface text-on-surface font-label-md text-label-md transition-all duration-200 active:scale-95 hover:bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">psychology</span> Stress
+                 </button>
+<button class="trigger-chip px-5 py-3 rounded-full border border-outline-variant bg-surface text-on-surface font-label-md text-label-md transition-all duration-200 active:scale-95 hover:bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">sentiment_dissatisfied</span> Boredom
+                 </button>
+<button class="trigger-chip px-5 py-3 rounded-full border border-outline-variant bg-surface text-on-surface font-label-md text-label-md transition-all duration-200 active:scale-95 hover:bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">groups</span> Social
+                 </button>
+<button class="trigger-chip px-5 py-3 rounded-full border border-outline-variant bg-surface text-on-surface font-label-md text-label-md transition-all duration-200 active:scale-95 hover:bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">restaurant</span> After Meal
+                 </button>
+<button class="trigger-chip px-5 py-3 rounded-full border border-outline-variant bg-surface text-on-surface font-label-md text-label-md transition-all duration-200 active:scale-95 hover:bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">work_history</span> Work Break
+                 </button>
+</div>
+<div class="mt-stack-md flex justify-end">
+<button class="px-6 py-3 bg-surface-container-high text-on-surface font-label-md text-label-md rounded-full hover:bg-surface-container-highest transition-colors active:scale-95">Save Log</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex md:hidden justify-around items-center px-4 py-3 max-w-[600px] mx-auto bg-surface-container-lowest shadow-[0_-4px_20px_rgba(91,174,165,0.08)] rounded-t-lg">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-colors active:scale-90 duration-200 rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span class="font-label-sm text-label-sm font-semibold">Log</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-colors active:scale-90 duration-200 rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1">insights</span>
+<span class="font-label-sm text-label-sm">Progress</span>
+</a>
+</nav>
+<script>
+        // Trigger Chip Selection Logic
+        const chips = document.querySelectorAll('.trigger-chip');
+        chips.forEach(chip => {
+            chip.addEventListener('click', function() {
+                this.classList.toggle('chip-selected');
+                
+                // Animate icon if selected
+                const icon = this.querySelector('.material-symbols-outlined');
+                if(this.classList.contains('chip-selected')) {
+                    icon.style.fontVariationSettings = "'FILL' 1";
+                    icon.style.transform = "scale(1.1)";
+                    setTimeout(() => icon.style.transform = "scale(1)", 150);
+                } else {
+                    icon.style.fontVariationSettings = "'FILL' 0";
+                }
+            });
+        });
+
+        // Main Log Button Ripple Effect
+        const logBtn = document.getElementById('logBtn');
+        const rippleContainer = document.getElementById('rippleContainer');
+
+        logBtn.addEventListener('click', function(e) {
+            const circle = document.createElement('div');
+            const diameter = Math.max(this.clientWidth, this.clientHeight);
+            const radius = diameter / 2;
+
+            const rect = this.getBoundingClientRect();
+            
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${e.clientX - rect.left - radius}px`;
+            circle.style.top = `${e.clientY - rect.top - radius}px`;
+            
+            circle.classList.add('absolute', 'bg-white', 'opacity-30', 'rounded-full', 'scale-0', 'transition-transform', 'duration-500', 'ease-out');
+            
+            rippleContainer.appendChild(circle);
+
+            // Force reflow
+            void circle.offsetWidth;
+            
+            circle.classList.remove('scale-0');
+            circle.classList.add('scale-150', 'opacity-0');
+
+            setTimeout(() => {
+                circle.remove();
+            }, 500);
+        });
+    </script>
+</body></html>

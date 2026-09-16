@@ -1,0 +1,77 @@
+import type { Config } from 'tailwindcss';
+import nativewindPreset from 'nativewind/preset';
+import { borderRadius, colors, spacing } from './constants/theme';
+
+const config: Config = {
+  content: ['./app/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
+  presets: [nativewindPreset],
+  theme: {
+    extend: {
+      colors: {
+        surface: colors.surface,
+        'surface-dim': colors.surfaceDim,
+        'surface-bright': colors.surfaceBright,
+        'surface-container-lowest': colors.surfaceContainerLowest,
+        'surface-container-low': colors.surfaceContainerLow,
+        'surface-container': colors.surfaceContainer,
+        'surface-container-high': colors.surfaceContainerHigh,
+        'surface-container-highest': colors.surfaceContainerHighest,
+        'on-surface': colors.onSurface,
+        'on-surface-variant': colors.onSurfaceVariant,
+        'inverse-surface': colors.inverseSurface,
+        'inverse-on-surface': colors.inverseOnSurface,
+        outline: colors.outline,
+        'outline-variant': colors.outlineVariant,
+        'surface-tint': colors.surfaceTint,
+        primary: colors.primary,
+        'on-primary': colors.onPrimary,
+        'primary-container': colors.primaryContainer,
+        'on-primary-container': colors.onPrimaryContainer,
+        'inverse-primary': colors.inversePrimary,
+        secondary: colors.secondary,
+        'on-secondary': colors.onSecondary,
+        'secondary-container': colors.secondaryContainer,
+        'on-secondary-container': colors.onSecondaryContainer,
+        tertiary: colors.tertiary,
+        'on-tertiary': colors.onTertiary,
+        'tertiary-container': colors.tertiaryContainer,
+        'on-tertiary-container': colors.onTertiaryContainer,
+        error: colors.error,
+        'on-error': colors.onError,
+        'error-container': colors.errorContainer,
+        'on-error-container': colors.onErrorContainer,
+        background: colors.background,
+        'on-background': colors.onBackground,
+        'surface-variant': colors.surfaceVariant,
+        'input-background': colors.inputBackground,
+      },
+      spacing: {
+        base: `${spacing.base}px`,
+        gutter: `${spacing.gutter}px`,
+        'stack-sm': `${spacing.stackSm}px`,
+        'stack-md': `${spacing.stackMd}px`,
+        'stack-lg': `${spacing.stackLg}px`,
+        'container-padding': `${spacing.containerPadding}px`,
+      },
+      borderRadius: {
+        sm: `${borderRadius.sm}px`,
+        DEFAULT: `${borderRadius.default}px`,
+        md: `${borderRadius.md}px`,
+        lg: `${borderRadius.lg}px`,
+        xl: `${borderRadius.xl}px`,
+        full: `${borderRadius.full}px`,
+      },
+      fontFamily: {
+        quicksand: ['Quicksand_400Regular'],
+        'quicksand-medium': ['Quicksand_500Medium'],
+        'quicksand-semibold': ['Quicksand_600SemiBold'],
+        'quicksand-bold': ['Quicksand_700Bold'],
+        jakarta: ['PlusJakartaSans_500Medium'],
+        'jakarta-semibold': ['PlusJakartaSans_600SemiBold'],
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;

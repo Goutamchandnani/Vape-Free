@@ -1,0 +1,227 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>VapeFree - Home Widget</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600&amp;family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#00201d",
+                      "on-secondary-fixed": "#390c00",
+                      "surface-container": "#efeeeb",
+                      "secondary-fixed": "#ffdbcf",
+                      "inverse-primary": "#82d5cb",
+                      "on-tertiary-container": "#113f23",
+                      "surface-tint": "#006a63",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-highest": "#e4e2df",
+                      "on-primary-container": "#003f3a",
+                      "surface-dim": "#dbdad7",
+                      "surface-container-high": "#eae8e5",
+                      "secondary-container": "#fdaa8d",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed": "#bcefc5",
+                      "outline-variant": "#bec9c6",
+                      "primary-container": "#5baea5",
+                      "on-surface": "#1b1c1a",
+                      "surface-bright": "#fbf9f6",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "secondary": "#8d4d36",
+                      "primary-fixed": "#9ef2e7",
+                      "on-tertiary-fixed-variant": "#234f31",
+                      "tertiary-container": "#7cab86",
+                      "on-background": "#1b1c1a",
+                      "on-secondary-fixed-variant": "#703621",
+                      "background": "#fbf9f6",
+                      "on-surface-variant": "#3e4947",
+                      "outline": "#6e7977",
+                      "on-primary-fixed-variant": "#00504a",
+                      "surface-variant": "#e4e2df",
+                      "primary": "#006a63",
+                      "surface": "#fbf9f6",
+                      "tertiary": "#3b6847",
+                      "inverse-surface": "#30312f",
+                      "secondary-fixed-dim": "#ffb59c",
+                      "inverse-on-surface": "#f2f0ed",
+                      "tertiary-fixed-dim": "#a1d2aa",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f5f3f0",
+                      "primary-fixed-dim": "#82d5cb",
+                      "on-tertiary-fixed": "#00210d",
+                      "on-secondary-container": "#783c27"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-md": "24px",
+                      "base": "8px",
+                      "container-padding": "24px",
+                      "stack-lg": "48px",
+                      "stack-sm": "12px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Quicksand"
+                      ],
+                      "label-sm": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Quicksand"
+                      ],
+                      "headline-lg": [
+                              "Quicksand"
+                      ],
+                      "headline-md": [
+                              "Quicksand"
+                      ],
+                      "headline-xl": [
+                              "Quicksand"
+                      ],
+                      "headline-lg-mobile": [
+                              "Quicksand"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-xl": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .circular-progress {
+            stroke-dasharray: 100;
+            stroke-dashoffset: 40; /* Represents 60% completion (12/20) */
+            transition: stroke-dashoffset 0.5s ease-out;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex items-center justify-center p-6">
+<!-- Widget Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(91,174,165,0.08)] p-6 w-full max-w-sm flex flex-col gap-6 relative overflow-hidden">
+<!-- Ambient subtle background glow -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary-container rounded-full blur-3xl opacity-20 pointer-events-none"></div>
+<!-- Header: Days Clean -->
+<div class="flex items-center justify-between z-10">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Milestone</p>
+<h2 class="font-headline-md text-headline-md text-primary">5 Days Clean</h2>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+<!-- Today's Progress & Quick Action -->
+<div class="flex items-center justify-between z-10 bg-surface-container rounded-lg p-4">
+<div class="flex items-center gap-4">
+<!-- Circular Progress Bar -->
+<div class="relative w-14 h-14">
+<svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+<!-- Background Circle -->
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<!-- Progress Circle -->
+<path class="circular-progress text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<!-- Center Text -->
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="font-label-md text-label-md text-on-surface">60%</span>
+</div>
+</div>
+<!-- Text Info -->
+<div>
+<p class="font-body-md text-body-md text-on-surface-variant">Today</p>
+<p class="font-label-md text-label-md text-on-surface"><span class="text-primary font-bold">12</span> / 20 puffs</p>
+</div>
+</div>
+<!-- Quick Action Button -->
+<button class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center hover:opacity-90 active:scale-95 transition-all shadow-md group">
+<span class="material-symbols-outlined group-hover:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+<!-- Supportive Message -->
+<div class="z-10 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant italic">"You're doing great, keep breathing."</p>
+</div>
+</div>
+</body></html>
