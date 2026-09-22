@@ -1,0 +1,9 @@
+appId: host.exp.exponent
+---
+- launchApp
+- tapOn:
+    text: "Support"
+    optional: true
+- assertVisible:
+    id: "chat-screen-title"
+    optional: true

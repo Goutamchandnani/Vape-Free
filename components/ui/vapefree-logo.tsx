@@ -28,6 +28,7 @@ export function VapeFreeLogo({
       accessible
       accessibilityRole="image"
       accessibilityLabel={accessibilityLabel}
+      accessibilityIgnoresInvertColors
       testID={testID}
       source={logoSource}
       style={[{ width: size, height: size, resizeMode: 'contain' }, style]}

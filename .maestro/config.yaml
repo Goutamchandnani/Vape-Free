@@ -1,0 +1,10 @@
+# Maestro E2E configuration for VapeFree (Expo Go).
+#
+# Install: https://maestro.mobile.dev/getting-started/installing-maestro
+# Run against a device/simulator with Expo Go and Metro already running:
+#   npm run test:e2e
+#
+# Set MAESTRO_APP_ID to your dev client or production bundle id when not using Expo Go.
+
+env:
+  MAESTRO_APP_ID: host.exp.exponent

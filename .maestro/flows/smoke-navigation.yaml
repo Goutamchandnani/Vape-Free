@@ -1,0 +1,17 @@
+appId: host.exp.exponent
+---
+- launchApp
+- assertVisible:
+    text: ".*"
+    optional: true
+- extendedWaitUntil:
+    visible:
+      text: "Home"
+    timeout: 30000
+    optional: true
+- tapOn:
+    text: "Track"
+    optional: true
+- assertVisible:
+    id: "track-screen-title"
+    optional: true
